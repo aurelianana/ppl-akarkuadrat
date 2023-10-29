@@ -12,5 +12,7 @@ class AkarKuadrat extends Model
     protected $fillable = [
         'angka',
         'hasil',
+        'method',
+        'execution_time'
     ];
 }

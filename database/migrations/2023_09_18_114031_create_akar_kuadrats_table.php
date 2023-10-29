@@ -15,8 +15,10 @@ class CreateAkarKuadratsTable extends Migration
     {
         Schema::create('akar_kuadrats', function (Blueprint $table) {
             $table->id();
-            $table->float('angka');
-            $table->float('hasil');
+            $table->double('angka');
+            $table->double('hasil');
+            $table->double('execution_time')->nullable();
+            $table->enum('method', ['api', 'sql'])->default('api');
             $table->timestamps();
         });
     }

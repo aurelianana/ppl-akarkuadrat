@@ -19,4 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/akar-kuadrat', [AkarKuadratController::class, 'index']);
 Route::get('/akar-kuadrat/{angka}', [AkarKuadratController::class, 'hitungAkarKuadrat']);
+Route::get('/akar-kuadrat-sql/{angka}', [AkarKuadratController::class, 'hitungAkarKuadratSqrt']);
