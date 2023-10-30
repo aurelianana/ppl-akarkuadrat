@@ -40,8 +40,8 @@ class AkarKuadratController extends Controller
 
         // call procedure hitung_akar_kuadrat
         $result = 0;
-        $result = DB::statement('CALL hitung_akar_kuadrat(?, @result)', [$number]);
-        $result = DB::select('SELECT @result as result')[0]->result;
+        $result = DB::select('select hitung_akar_kuadrat(?)', [$number]);
+        $result = $result[0]->hitung_akar_kuadrat;
 
         // save to database
         $execution_time = microtime(true) - LARAVEL_START;
