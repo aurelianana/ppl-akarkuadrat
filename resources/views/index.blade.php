@@ -183,7 +183,7 @@
     </div>
 
     <script>
-        const URL = 'http://127.0.0.1:8000'
+        const URL = 'https://ppl-akarkuadrat-production.up.railway.app'
         fetchHistory();
         const historyList = document.getElementById('history-list');
         const historyTable = document.getElementById('history-table');

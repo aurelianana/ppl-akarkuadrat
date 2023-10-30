@@ -55,7 +55,7 @@
             data: $(this).serialize(),
             success: function(data){
                 // save token to localstorage
-                localStorage.setItem('token', data.token);
+                localStorage.setItem('token', data.data.token);
                 // redirect to home
                 window.location.href = "{{ route('home') }}";
             },
